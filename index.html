@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>FirestormProject</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Firebase notes</h1>
+            <input class="form-control" id="input" type="text" placeholder="Search">
+        </div>
+    </div>
+    <div class="container my-5">
+        <ul>
+        </ul>
+        <form>
+            <h2 for="note">Add a new note:</h2>
+            <div class="input">
+                <h4>Title</h4>
+                <input type="text" class="form-control" id="title" required>
+                <h4>Body</h4>
+                <input type="text" class="form-control" id="body" required>
+                <h7>Important?</h7>
+                <input type="checkbox" class="checkmark form-check-input" id="imp">
+                <input type="submit" value="Create" class="create-btn btn btn-outline-secondary">
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBvq7UgPb3A3UiDaYsrU6UoJJG3m0-Mjf8",
+            authDomain: "fir-project-64ed3.firebaseapp.com",
+            databaseURL: "https://fir-project-64ed3.firebaseio.com",
+            projectId: "fir-project-64ed3",
+            storageBucket: "fir-project-64ed3.appspot.com",
+            messagingSenderId: "733790523705",
+            appId: "1:733790523705:web:b3af764c90f25f015798e8",
+            measurementId: "G-C31093XPBK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        // firebase.analytics();
+    </script>
+    <script src='main.js'></script>
+
+</body>
+
+</html>
